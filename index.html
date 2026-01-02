@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Adithya Nambiar | Data Analyst & Business Analytics Professional | Rochester, NY</title>
+    <meta name="description" content="MS Business Analytics professional with 3+ years experience in data analytics, Salesforce development, and strategic consulting. 7x Salesforce certified.">
+    <meta name="keywords" content="Data Analyst, Business Analyst, Consultant, Salesforce Developer, Business Analytics, Python, SQL, Tableau, Power BI, Rochester NY, Simon Business School">
+    <meta name="author" content="Adithya Nambiar">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adithya Nambiar | Data Analyst & Consultant">
+    <meta property="og:description" content="MS Business Analytics professional with expertise in data analytics, Salesforce, and strategic consulting.">
+    
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: white;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #7c9aff;
+            --secondary-color: #9a6cc4;
+            --text-color: #e0e0e0;
+            --bg-color: #1a1a2e;
+            --card-bg: #16213e;
+            --shadow: rgba(0,0,0,0.4);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            z-index: 1001;
+            transition: width 0.1s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px var(--shadow);
+            overflow: hidden;
+            border: 5px solid white;
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            color: white;
+            flex: 1;
+            min-width: 120px;
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .project-header .project-type {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .project-tag {
+            background: var(--bg-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .project-highlights {
+            margin: 1rem 0;
+        }
+
+        .project-highlights h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .project-highlights ul {
+            margin-left: 1.5rem;
+        }
+
+        .project-highlights li {
+            margin-bottom: 0.3rem;
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            margin-left: 1.5rem;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .school {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-card ul {
+            margin-left: 1.5rem;
+        }
+
+        .education-card li {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.1);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-badge {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .cert-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-badge .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-badge h4 {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-link .icon {
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .contact-link:hover .icon {
+            transform: rotate(360deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Adithya Nambiar</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Adithya Nambiar</h1>
+            <p class="subtitle">MS Business Analytics '25 | Data Analyst | Business Analyst | Consultant</p>
+            <p>Data-driven professional with expertise in Analytics, AI/ML, Salesforce solutions, and Strategic Consulting. Passionate about leveraging advanced analytics, deep learning, Python, SQL, and Tableau to transform complex challenges into impactful business outcomes through cutting-edge machine learning solutions.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="documents/Adithya_Nambiar_Resume.pdf" download class="btn btn-download">📥 Download Resume</a>
+                <a href="https://www.linkedin.com/in/adithya-s-nambiar" target="_blank" class="btn btn-secondary">View LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Adithya Nambiar - Data Analyst and AI/ML Professional">
+                </div>
+                <div class="about-text">
+                    <h3>Data Analyst & AI/ML Enthusiast</h3>
+                    <p>Currently pursuing an MS in Business Analytics at Simon Business School, University of Rochester (expected December 2025). I bring deep expertise gained from leading impactful projects at Accenture that benefited millions of customers, combined with advanced coursework in machine learning, AI & deep learning, and predictive analytics.</p>
+                    <p>My experience spans data analytics, Salesforce development (7x certified), and strategic consulting. Through my graduate program, I've developed hands-on expertise in building machine learning solutions using TensorFlow and PyTorch, including CNNs for computer vision and Transformers for NLP. I leverage Python, R, SQL, and visualization tools like Tableau and Power BI to uncover insights and drive data-informed decision-making across business and technical domains.</p>
+                    <p>Beyond work, I enjoy reading thought-provoking books, listening to podcasts, playing chess, and training in Taekwondo where I hold a black belt. I'm also passionate about cars and automotive design.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Salesforce Certs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7.3M+</div>
+                            <div class="stat-label">Users Impacted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🏗️ USC Builds Supply Chain Optimization</h3>
+                        <div class="project-type">Capstone Project | Simon Business School</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Comprehensive supply chain analysis for USC Builds construction company, analyzing $33+ million in procurement spend across 11,000+ purchase orders to identify cost-saving opportunities.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Tableau</span>
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Data Analysis</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Identified $840K-$1.8M in annual cost savings opportunities</li>
+                                <li>Analyzed extreme pricing variances (up to 5,650% for identical items)</li>
+                                <li>Developed vendor management and pricing standardization strategies</li>
+                                <li>Created executive dashboards for inventory optimization</li>
+                                <li>Presented findings to client leadership and stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🏘️ NYC NGO Community Assessment</h3>
+                        <div class="project-type">Consulting Project | Simon Vision Consulting</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Strategic planning and community needs assessment for an NGO serving the Chelsea neighborhood in New York City, analyzing community feedback and service delivery gaps.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Survey Analysis</span>
+                            <span class="project-tag">Strategic Planning</span>
+                            <span class="project-tag">Stakeholder Engagement</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Analyzed 2,000+ survey responses to identify service gaps</li>
+                                <li>Created interactive Power BI dashboards for stakeholders</li>
+                                <li>Developed strategic recommendations for service expansion</li>
+                                <li>Improved community engagement metrics by 30%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>📊 AI-Enhanced Employee Engagement</h3>
+                        <div class="project-type">Analytics Project | Nexus Logistics</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Evaluated training effectiveness across 11 courses, analyzing proficiency improvements across 13 regional centers using Python and R statistical analysis.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">R</span>
+                            <span class="project-tag">Statistical Analysis</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Training Analytics</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Identified optimal course sequences for skill development</li>
+                                <li>Demonstrated in-person training superiority for skill-intensive courses</li>
+                                <li>Analyzed 2019-2023 performance trends across regional centers</li>
+                                <li>Provided data-driven recommendations for training program optimization</li>
+                                <li>Evaluated training ROI and employee proficiency improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>💳 ML-Based HELOC Credit Decisioning System</h3>
+                        <div class="project-type">Machine Learning Project | Credit Risk Assessment</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Built an ML-powered credit decisioning system that automates HELOC application assessment with advanced feature engineering, achieving 94.06% precision and 99.40% specificity using XGBoost and Azure AutoML.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">XGBoost</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Azure AutoML</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">SMOTE</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Achieved 94.06% precision and 99.40% specificity with AUC of 0.8041</li>
+                                <li>Engineered XGBoostClassifier with hyperparameter tuning (Max Depth=9, 100 trees)</li>
+                                <li>Applied SMOTE and RandomizedSearchCV for model optimization</li>
+                                <li>Built interactive Streamlit web app with batch processing and PDF report generation</li>
+                                <li>Leveraged Azure AutoML to benchmark ensemble methods (logistic regression, random forests)</li>
+                                <li>Implemented customizable rejection thresholds and threshold sensitivity analysis</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--bg-color);">
+                            <a href="https://github.com/ritwikagrawal1228/HELOC-Assessment-ML-Streamlit" target="_blank" style="color: var(--primary-color); text-decoration: none; margin-right: 1.5rem;">
+                                🔗 GitHub Repository
+                            </a>
+                            <a href="https://lnkd.in/d6dbJ_2s" target="_blank" style="color: var(--primary-color); text-decoration: none;">
+                                📄 Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🏠 Odinma LLC Operations Optimization</h3>
+                        <div class="project-type">Consulting Project | Simon Vision Consulting</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Developed optimized strategies and operational efficiency improvements for a residential apartment rental business, enhancing brand identity and revenue forecasting.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Revenue Forecasting</span>
+                            <span class="project-tag">Market Analysis</span>
+                            <span class="project-tag">KPI Development</span>
+                            <span class="project-tag">Strategy</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Created dynamic models based on market conditions</li>
+                                <li>Developed comprehensive performance metrics framework</li>
+                                <li>Improved revenue forecasting accuracy by 20%</li>
+                                <li>Aligned marketing and operations KPIs across teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>⚡ Salesforce Banking Transformation</h3>
+                        <div class="project-type">Enterprise Project | Accenture</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Led complete CRM migration from CRMNext to Salesforce for one of India's largest private banks, impacting millions of customers and thousands of employees.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">Salesforce</span>
+                            <span class="project-tag">Enterprise Architecture</span>
+                            <span class="project-tag">DevOps</span>
+                            <span class="project-tag">Integration</span>
+                            <span class="project-tag">Change Management</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Successfully migrated 26M customer accounts to Salesforce</li>
+                                <li>Implemented 100+ automated workflows and integrations</li>
+                                <li>Reduced customer onboarding time by 25% through KYC automation</li>
+                                <li>Managed 100+ production deployments with 30% time savings</li>
+                                <li>Awarded Accenture All-Star Award for project excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🤖 Deep Learning Image Classification using CNN</h3>
+                        <div class="project-type">Machine Learning Project | TensorFlow</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Built and trained a CNN-based image classification model using TensorFlow and Keras on the CelebA dataset with advanced regularization and optimization techniques.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Keras</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">CNNs</span>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Processed and trained on 10K+ facial images using optimized tf.data pipelines</li>
+                                <li>Applied dropout (30-50%), L2 regularization, and learning-rate scheduling</li>
+                                <li>Achieved 70-85% validation accuracy through architectural tuning</li>
+                                <li>Reduced training instability using callback-based optimization techniques</li>
+                                <li>Implemented efficient batching and prefetching for faster training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>😊 Facial Smile Detection using Deep Learning</h3>
+                        <div class="project-type">Computer Vision Project | TensorFlow</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Developed a binary facial expression classifier to detect smiles from aligned face images using convolutional neural networks.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Keras</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">CNNs</span>
+                            <span class="project-tag">Binary Classification</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Trained CNN on thousands of labeled face images for smile detection</li>
+                                <li>Designed convolutional layers to learn discriminative facial features</li>
+                                <li>Achieved 75-85% validation accuracy on unseen images</li>
+                                <li>Used dropout and early stopping to prevent overfitting</li>
+                                <li>Optimized model for real-time facial expression recognition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🌐 Neural Machine Translation: English → Spanish</h3>
+                        <div class="project-type">NLP Project | Transformer & RNN</div>
+                    </div>
+                    <div class="project-content">
+                        <p>Built an end-to-end English-to-Spanish neural machine translation system, comparing GRU-based seq2seq and Transformer architectures on 50K+ sentence pairs.</p>
+                        
+                        <div class="project-tags">
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Transformers</span>
+                            <span class="project-tag">RNNs</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Seq2Seq</span>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Trained on 50K+ bilingual sentence pairs from real-world dataset</li>
+                                <li>Improved translation accuracy from 60% (RNN) to 69-70% (Transformer)</li>
+                                <li>Implemented custom positional embeddings and multi-head attention</li>
+                                <li>Applied masked loss and greedy decoding for translation generation</li>
+                                <li>Compared architectural performance of GRU vs Transformer models</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Consultant</h3>
+                        <div class="company">Simon Vision Consulting</div>
+                        <div class="date">January 2025 - April 2025 | Rochester, NY</div>
+                        <ul>
+                            <li>Developed optimized strategies and enhanced brand identity for Odinma LLC residential apartment rental business</li>
+                            <li>Created comprehensive performance metrics and revenue forecasting models</li>
+                            <li>Partnered with cross-functional teams to align marketing and operations KPIs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Consultant</h3>
+                        <div class="company">Simon Vision Consulting</div>
+                        <div class="date">October 2024 - December 2024 | Rochester, NY</div>
+                        <ul>
+                            <li>Conducted strategic planning and community needs assessment for NYC NGO serving Chelsea neighborhood</li>
+                            <li>Analyzed 2,000+ survey responses using Power BI dashboards to identify service gaps</li>
+                            <li>Delivered actionable insights to improve service delivery and community engagement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Application Development Analyst</h3>
+                        <div class="company">Accenture</div>
+                        <div class="date">May 2021 - October 2022 | Mumbai, India</div>
+                        <ul>
+                            <li>Led team of 5 to design and optimize Salesforce applications for banking client with $4.5B+ revenue</li>
+                            <li>Managed deployment of 100+ functionalities benefiting 7.3M+ customers and 26M accounts</li>
+                            <li>Reduced customer onboarding time by 25% through KYC video automation in Salesforce</li>
+                            <li>Awarded Accenture All-Star Award FY22 for exceptional performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Application Development Associate</h3>
+                        <div class="company">Accenture</div>
+                        <div class="date">July 2019 - May 2021 | Mumbai, India</div>
+                        <ul>
+                            <li>Facilitated CRMNext to Salesforce transition for one of India's largest private banks</li>
+                            <li>Collaborated with cross-functional teams to release first iteration to production, impacting 26M accounts</li>
+                            <li>Led 100+ production deployments using DevOps, achieving 30% time savings</li>
+                            <li>Awarded Accenture All Star Award FY21</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Master of Science in Business Analytics</h3>
+                    <div class="school">Simon Business School, University of Rochester</div>
+                    <div class="date">July 2024 - December 2025</div>
+                    <ul>
+                        <li>STEM-Certified Program</li>
+                        <li>Merit Scholarship Recipient</li>
+                        <li>Coursework: Machine Learning, AI & Deep Learning, Python Programming, Data Visualization</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h3>Bachelor of Technology in Electronics Engineering</h3>
+                    <div class="school">KJ Somaiya College of Engineering</div>
+                    <div class="date">May 2015 - May 2019</div>
+                    <ul>
+                        <li>First Class Division</li>
+                        <li>Grade Point 10/10 in Final Year Project</li>
+                        <li>Project: 3D Printed Robotic Arm Using IoT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📊 Analytics & Visualization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>☁️ Salesforce Platform</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apex</span>
+                        <span class="skill-tag">SOQL</span>
+                        <span class="skill-tag">Lightning</span>
+                        <span class="skill-tag">Service Cloud</span>
+                        <span class="skill-tag">Integration</span>
+                        <span class="skill-tag">Admin</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Cursor</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🤖 Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Azure ML</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔧 DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Bitbucket</span>
+                        <span class="skill-tag">JIRA</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English</span>
+                        <span class="skill-tag">Hindi</span>
+                        <span class="skill-tag">Malayalam</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Awards</h2>
+            <div class="cert-grid">
+                <div class="cert-badge">
+                    <div class="icon">🏆</div>
+                    <h4>Agentforce Specialist</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">💻</div>
+                    <h4>Platform Developer II</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">⚡</div>
+                    <h4>Platform Developer I</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">🛠️</div>
+                    <h4>Platform App Builder</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">☁️</div>
+                    <h4>Service Cloud Consultant</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">👨‍💼</div>
+                    <h4>Platform Administrator</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">📚</div>
+                    <h4>Platform Foundations</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">⭐</div>
+                    <h4>Five Star Ranger</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">🎖️</div>
+                    <h4>All Star Award FY22</h4>
+                </div>
+                <div class="cert-badge">
+                    <div class="icon">🎖️</div>
+                    <h4>All Star Award FY21</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm currently seeking opportunities as a Data Analyst, Business Analyst, or Consultant. Let's connect and explore how I can contribute to your organization!</p>
+                
+                <div class="contact-links">
+                    <a href="/cdn-cgi/l/email-protection#c6a7a8a7aba4afa7f586b5afaba9a8e8b4a9a5aea3b5b2a3b4e8a3a2b3" class="contact-link">
+                        <div class="icon">✉️</div>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adithya-s-nambiar" target="_blank" class="contact-link">
+                        <div class="icon">💼</div>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://trailblazer.me/id/adinam" target="_blank" class="contact-link">
+                        <div class="icon">☁️</div>
+                        <span>Trailblazer</span>
+                    </a>
+                    <a href="tel:+15854156441" class="contact-link">
+                        <div class="icon">📱</div>
+                        <span>Phone</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Adithya Nambiar. All rights reserved.</p>
+            <p>Rochester, New York | Data Analyst | Business Analyst | Consultant</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Google Analytics Event Tracking
+        function trackEvent(category, action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': category,
+                    'event_label': label
+                });
+            }
+        }
+
+        // Initialize everything when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePortfolio);
+        } else {
+            initializePortfolio();
+        }
+
+        function initializePortfolio() {
+            // Scroll Progress Bar
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                const progressBar = document.getElementById('progressBar');
+                if (progressBar) progressBar.style.width = scrolled + '%';
+            });
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const htmlElement = document.documentElement;
+                const currentTheme = localStorage.getItem('theme') || 'light';
+                htmlElement.setAttribute('data-theme', currentTheme);
+                themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+                themeToggle.addEventListener('click', function() {
+                    const theme = htmlElement.getAttribute('data-theme');
+                    const newTheme = theme === 'light' ? 'dark' : 'light';
+                    htmlElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+                    trackEvent('UI', 'theme_toggle', newTheme);
+                });
+            }
+
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                });
+
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    trackEvent('Navigation', 'back_to_top', 'Button Click');
+                });
+            }
+
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        trackEvent('Navigation', 'click', this.getAttribute('href'));
+                    }
+                });
+            });
+
+            // Track External Links
+            document.querySelectorAll('a[target="_blank"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    trackEvent('External Link', 'click', this.href);
+                });
+            });
+
+            // Track Resume Download
+            document.querySelectorAll('a[download]').forEach(link => {
+                link.addEventListener('click', function() {
+                    trackEvent('Resume', 'download', 'Resume PDF');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
